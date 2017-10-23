@@ -1,0 +1,11 @@
+body {
+    background-image: url("../images/background.png");
+}
+
+.jumbotron {
+	background-color: #6699cc;
+}
+
+.btn {
+	font-size: 35px;
+}

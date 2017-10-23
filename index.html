@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trivia Game</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class=container id="startDiv">
+        <div class="jumbotron text-center">
+            <h1>Totally Trivia!</h1>
+            <button type="button" class="btn btn-primary" id="startButton">Start</button>
+        </div>
+    </div>
+    <!-- Question Container -->
+    <div class=container id="questionsDiv">
+        <div class="jumbotron text-center">
+            <!-- Time: 10 Seconds per question-->
+            <h3 id="timer">Time Remaining: 60 Seconds</h3>
+            <!-- Question 1 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>1) What is the process called when milk turns into yoghurt?</p>
+                    <form>
+                        <label class="radio-inline">
+                            <input type="radio" name="question1" value="bacteria">Bacteria Fermentation
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question1" value="mold">Mold Growth
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question1" value="molecule">Molecule Synthesis
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>2) What is the largest planet of our Solar System called?</p>
+                    <form>
+                        <label class="radio-inline">
+                            <input type="radio" name="question2" value="earth">Earth
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question2" value="jupiter">Jupiter
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question2" value="uranus">Uranus
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>3) How many squares are in normal Monopoly board?</p>
+                    <form>
+                        <label class="radio-inline">
+                            <input type="radio" name="question3" value="60">60
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question3" value="20">20
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question3" value="40">40
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>4) Which popular peer-to-peer network was shut down in October 2013?</p>
+                    <form>
+                        <label class="radio-inline">
+                            <input type="radio" name="question4" value="isoHunt">isoHunt
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question4" value="megaUpload">Mega Upload
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question4" value="pirateBay">The Pirate Bay
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <!-- Question 5 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>5) What was advertised in the World's first junk mail?</p>
+                    <form>
+                        <label class="radio-inline">
+                            <input type="radio" name="question5" value="dating">Dating Service
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question5" value="weight">Weight Loss Pills
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question5" value="computer">Computer
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <!-- Question 6 -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>6) How many days can a flu virus live in bills?</p>
+                    <form>
+                        <label class="radio-inline">
+                            <input type="radio" name="question6" value="17">17
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question6" value="2">2
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="question6" value="8">8
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="doneButton">Done</button>
+        </div>
+        <!-- jumbotron -->
+    </div>
+    <!-- Container -->
+    <!-- Results Container -->
+    <div class=container id="resultsDiv">
+        <div class="jumbotron text-center">
+            <h1>All Done!</h1>
+            <h3 id="correctAnswers">Correct Answers: 0</h3>
+            <h3 id="incorrectAnswers">Incorrect ASnswers: 0</h3>
+            <h3 id="unanswered">Unanswered: 0</h3>
+        </div>
+    </div>
+    <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
